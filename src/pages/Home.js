@@ -1,9 +1,18 @@
 import "../styles/home.css"
 
-const Home = () => {
+const Home = ({
+    cat
+}) => {
     return ( 
         <div>
-            <p>Home</p>
+            {cat.map((item, index) => {
+                return (
+                    <>
+                        <p key={index}>{item.id}</p>
+                        <img src={item.url} alt="random" />
+                    </>
+                )
+            })}
         </div>
      );
 }
