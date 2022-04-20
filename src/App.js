@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -32,11 +32,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav>
+        {/* <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-        </nav>
+        </nav> */}
+
+        <Navbar />
       
         <Routes>
           <Route path="/" element={<Home cat={cat} />} />
