@@ -10,6 +10,7 @@ const Home = ({
                     <div className="cat-div">
                         <p className="cat-div-name" key={index}>{item.id}</p>
                         <img className="cat-div-img" src={item.url} alt="random" />
+                        <p>test text</p>
                     </div>
                 )
             })}
