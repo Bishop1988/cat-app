@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import GetCatImage from './http/GetCatImage';
+import GetData from './http/GetData';
+import { faker } from '@faker-js/faker'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,23 +14,19 @@ function App() {
   const [error, setError] = useState(null)
       
   useEffect(() => {
-    const fetchCats = async () => {
-      try {
-        const response = await fetch("https://api.thecatapi.com/v1/images/search")
-        if (!response.ok) {
-          throw new Error(response.statusText)
-        }
-        const data = await response.json()
-        setCat(data)
-      } catch (err) {
-        console.log(err.message)
-        setError("Could not fetch data")
-      }
-    }
-    fetchCats()
+    (async () => {
+      const images = await GetCatImage()
+      let data = GetData()
+      data = data.map((cat, i) => {
+        cat.image = images[i].url
+        cat.id = i
+        return cat
+      })
+      setCat(data)
+    })()
   }, [])
 
-  console.log(cat)
+
 
   return (
     <div className="App">
