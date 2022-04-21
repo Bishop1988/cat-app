@@ -1,18 +1,30 @@
+import Card from "../components/Card";
+
 import "../styles/home.css"
 
 const Home = ({
-    cat
+    cat,
+    addToBasket
 }) => {
     return ( 
-        <div>
-            {cat.map((item, index) => {
-                return (
-                    <div className="cat-div">
-                        <p className="cat-div-name" key={index}>{item.id}</p>
-                        <img className="cat-div-img" src={item.url} alt="random" />
-                    </div>
-                )
-            })}
+        <div className="home-container">
+            <div className="hero-content">
+                <p>Hero content</p>
+            </div>
+            <div className="cat-gallery">
+                {cat.map((cat, i) => {
+                    return (
+                        <Card 
+                            name={cat.name}
+                            price={cat.price}
+                            image={cat.image}
+                            key={i}
+                            id={cat.id}
+                            addToBasket={addToBasket}
+                        />
+                    )
+                })}
+            </div>
         </div>
      );
 }
