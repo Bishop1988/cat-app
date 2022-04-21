@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GetCatImage from './http/GetCatImage';
 import GetData from './http/GetData';
-import { faker } from '@faker-js/faker'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,11 +9,14 @@ import Contact from './pages/Contact';
 import Modal from './components/Modal';
 import useModal from './components/useModal';
 import './App.css';
+import AboutMe from './pages/AboutMe';
 
 function App() {
   const [cat, setCat] = useState([])
-  const [error, setError] = useState(null)
+  const [basketItems, setBasketItems] = useState([])
   const {isShowing, toggle} = useModal();
+
+  console.log(basketItems)
       
   useEffect(() => {
     (async () => {
@@ -29,7 +31,14 @@ function App() {
     })()
   }, [])
 
+  const addToBasket = (item) => {
+    setBasketItems([...basketItems, item])
+  }
 
+  const removeItemFromBasket = (item) => {
+    const remainingBasketItems = basketItems.filter(cat => cat.id !== item.id)
+    setBasketItems(remainingBasketItems)
+  }
 
   return (
     <div className="App">
@@ -37,6 +46,8 @@ function App() {
       <Modal
         isShowing={isShowing}
         hide={toggle}
+        basketItems={basketItems}
+        removeItemFromBasket={removeItemFromBasket}
       />
       <Router>
         {/* <nav>
@@ -48,9 +59,10 @@ function App() {
         <Navbar />
       
         <Routes>
-          <Route path="/" element={<Home cat={cat} />} />
-          <Route path="/about" element={<About />}/>
-          <Route path="/contact" element={<Contact />}/>
+          <Route path="/" element={<Home cat={cat} addToBasket={addToBasket} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/aboutMe" element={<AboutMe cat={cat} />} />
         </Routes>
       </Router>
     </div>

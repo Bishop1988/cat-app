@@ -5,8 +5,8 @@ import "../styles/navbar.css"
 const Navbar = () => {
     return ( 
         <nav className="navbar-container">
-            <ul>
-                <li><Link to="/about">About</Link></li>
+            <ul className="link-list">
+                <li><Link className="link" to="/about">About</Link></li>
             </ul>
         </nav>
      );
