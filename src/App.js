@@ -7,11 +7,14 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Modal from './components/Modal';
+import useModal from './components/useModal';
 import './App.css';
 
 function App() {
   const [cat, setCat] = useState([])
   const [error, setError] = useState(null)
+  const {isShowing, toggle} = useModal();
       
   useEffect(() => {
     (async () => {
@@ -30,6 +33,11 @@ function App() {
 
   return (
     <div className="App">
+      <button className="button-default" onClick={toggle}>Modal test</button>
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
       <Router>
         {/* <nav>
           <Link to="/">Home</Link>
