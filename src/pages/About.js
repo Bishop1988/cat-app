@@ -1,16 +1,14 @@
 import "../styles/about.css"
+import ragDoll from "../images/ragdoll1.jpeg"
 
 const About = () => {
     return ( 
         <div className="about-container">
             <h1>About us</h1>
-            <p>Non pulvinar neque laoreet suspendisse interdum. Blandit massa enim nec dui. 
-                Velit ut tortor pretium viverra. Id velit ut tortor pretium. Adipiscing elit ut aliquam purus sit amet.
-                 Duis at tellus at urna condimentum. Sed augue lacus viverra vitae congue eu consequat ac felis. 
-                 A erat nam at lectus.
-                 Vestibulum sed arcu non odio euismod. Sed viverra ipsum nunc aliquet bibendum.
-            </p>
-            <img src="https://images-ext-2.discordapp.net/external/SVKBTakwSBnVM42otW5R0Etuf3FusuCR4wNyfQgSZuk/https/2.bp.blogspot.com/-faG33oj_kw8/UqYPIMm-qCI/AAAAAAAAXHo/bUd8Kggb7rc/s1600/persian_cat_hd-wallpapers.jpg?width=782&height=587" alt=" a cat"/>
+            <p className="about-text"> 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+           <div className="image-adjust"></div>
+            <img src={ragDoll} alt=" a cat"/>
         </div>
      );
 }

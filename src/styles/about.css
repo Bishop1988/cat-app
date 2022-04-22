@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
 .about-container{
 
     display: flex;
-    font-family: 'Playfair Display', serif;
-    max-width: 50%;
+    font-family: 'Parisienne', cursive;
+    max-width: 40%;
     padding: 5%;
-    border: 5px solid lightgray;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     margin: auto;
-
-
-
+    background-color: rgb(235, 232, 232);
 }
+
+
+.about-text{
+    font-family: 'Poppins' , sans-serif;
+}
+
