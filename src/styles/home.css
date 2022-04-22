@@ -1,10 +1,13 @@
-.cat-div {
-    border: 2px solid red;
-    height: 300px;
-    width: 250px;
-}
-
-.cat-div-img {
-    height: 150px;
-    width: 150px;
+.cat-gallery {
+    padding: 20px;
+    /* margin: 0 auto; */
+    /* width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 280px));
+    grid-gap: 25px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
 }
