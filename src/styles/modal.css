@@ -41,6 +41,7 @@
   .modal h3 {
     text-align: center;
     margin: 7.5px;
+    
   }
   
   .modal-header {
@@ -65,13 +66,14 @@
     line-height: 1;
     color: #000;
     opacity: 0.6;
-    border: none;
-    border-radius: 3px;
+    border: 1px black solid;
+    border-radius: 15px;
     padding: .3rem 1rem;
     margin-left: .5rem;
     cursor: pointer;
     position: relative; 
     max-width: 30px; 
+    max-height: 30px;
     display: flex;
     justify-content: center;
   }
@@ -88,12 +90,13 @@
     object-fit: cover;
     margin-top: 25px;
     border: solid 2px black;
-    border-radius: 0%;
+    border-radius: 15px;
     align-self: center;
   }
 
   .modal-item-containers {
-    border: 1px solid black;
+    border: 3px solid black;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +105,7 @@
     backdrop-filter: blur(6px);
     margin-bottom: 20px;    
     padding: 25px 80px 25px 80px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    
+    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);   
   }
   .about-me-info {
     display: flex;
