@@ -1,10 +1,28 @@
-.cat-div {
-    border: 2px solid red;
-    height: 300px;
-    width: 250px;
+.hero-image-container {
+    text-align: center;
 }
 
-.cat-div-img {
-    height: 150px;
-    width: 150px;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: paleturquoise;
+    height: 60vh;
+    min-height: 500px;
+}
+
+.hero-image {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+.cat-gallery {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
 }

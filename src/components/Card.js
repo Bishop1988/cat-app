@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "../styles/home.css"
+import "../styles/card.css"
 
 const Card = ({
     name,
@@ -13,13 +13,10 @@ const Card = ({
         addToBasket({ id, name, price, image })
     }
   return (
-    <div className="cat-div">
-      <p>{name}</p>
-      <p>{price}</p>
-      <p className="cat-div-name">
-        {id}
-      </p>
-      <img className="cat-div-img" src={image} alt="random" />
+    <div className="card">
+      <img className="card-img" src={image} alt="random" />
+      <p className="card-name">{name}</p>
+      <p className="card-price">{price}</p>
       <Link to={`aboutMe/?id=${name}`}>About Me</Link>
       <button onClick={catInfo}>Add to Basket</button>
     </div>
