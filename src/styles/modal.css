@@ -33,15 +33,16 @@
     overflow: scroll;
   }
   .modal h2 {
-    color: white;
-    font-size: 35px;
-    -webkit-text-stroke: 0.8px black;
+    color: black;
+    font-size: 35px;    
+    font-family: 'Playfair Display', serif;
   }
 
   .modal h3 {
     text-align: center;
+    padding-top: 10px;
     margin: 7.5px;
-    
+    font-family: 'Playfair Display', serif;    
   }
   
   .modal-header {
