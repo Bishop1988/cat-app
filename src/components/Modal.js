@@ -2,9 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../styles/modal.css";
 
-const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) =>
-  isShowing
-    ? ReactDOM.createPortal(
+const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) => isShowing ? ReactDOM.createPortal(
         <React.Fragment>
           <div className="modal-overlay" />
           <div
@@ -27,7 +25,13 @@ const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) =>
                 </button>
               </div>
               <h2>Your Basket</h2>
-              <h2>Total: </h2>
+              <h2>Total: £{
+                basketItems.reduce((acc, currItem) => {
+                  acc += parseFloat(currItem.price)
+                  return acc
+                }, 0).toFixed(2)
+              } </h2>
+              
               {basketItems.map((item, i) => {
                   return (
                     <div className="modal-item-containers">

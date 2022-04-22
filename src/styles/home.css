@@ -1,10 +1,25 @@
+.hero-image-container {
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: paleturquoise;
+    height: 60vh;
+    min-height: 500px;
+}
+
+.hero-image {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+}
+
 .cat-gallery {
     padding: 20px;
-    /* margin: 0 auto; */
-    /* width: 80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 280px));
-    grid-gap: 25px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
