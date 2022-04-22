@@ -27,10 +27,11 @@ const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) =>
                 </button>
               </div>
               <h2>Your Basket</h2>
+              <h2>Total: </h2>
               {basketItems.map((item, i) => {
                   return (
-                    <div>
-                      <img src={item.image} alt="cat" />
+                    <div className="modal-item-containers">
+                      <img className="modal-images" src={item.image} alt="cat" />
 
                       <div className="about-me-info">
                         <h3>Name: {item.name}</h3>
@@ -39,7 +40,7 @@ const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) =>
                         <h3>Location: {item.city}</h3>
                         <h3>Sex: {item.gender}</h3> */}
                         <h3>Price: {item.price}</h3>
-                        <button onClick={() => removeItemFromBasket(item)}>Remove</button>
+                        <button className="modal-button" onClick={() => removeItemFromBasket(item)}>&times;</button>
                       </div>
                     </div>
                   );
