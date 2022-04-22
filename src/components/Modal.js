@@ -39,7 +39,7 @@ const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) =>
                         <h3>Age: {item.age}</h3>
                         <h3>Location: {item.city}</h3>
                         <h3>Sex: {item.gender}</h3> */}
-                        <h3>Price: {item.price}</h3>
+                        <h3>Price: £{item.price}</h3>
                         <button className="modal-button" onClick={() => removeItemFromBasket(item)}>&times;</button>
                       </div>
                     </div>
