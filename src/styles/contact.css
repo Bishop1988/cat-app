@@ -1,3 +1,12 @@
-.example {
-    border: 1px solid black;
+.contact-container {
+    /* background-color: lightskyblue; */
+    border: 4px solid lightgray;
+    padding: 5%;
+    font-family: 'Playfair Display', serif;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin: auto;
 }
