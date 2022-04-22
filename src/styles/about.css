@@ -10,7 +10,7 @@
     text-align: center;
     justify-content: center;
     margin: auto;
-
+    height: calc(100vh - 138px);
 
 
 }

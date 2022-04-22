@@ -21,11 +21,11 @@ const Modal = ({ isShowing, hide, basketItems, removeItemFromBasket }) => isShow
                   aria-label="Close"
                   onClick={hide}
                 >
-                  <span aria-hidden="true">&times;</span>
+                  <div aria-hidden="true">&times;</div>
                 </button>
               </div>
-              <h2>Your Basket</h2>
-              <h2>Total: £{
+              <h2 className="modal-your-basket">Your Basket</h2>
+              <h2 className="modal-your-basket-price">Total: £{
                 basketItems.reduce((acc, currItem) => {
                   acc += parseFloat(currItem.price)
                   return acc
