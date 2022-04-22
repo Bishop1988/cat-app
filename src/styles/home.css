@@ -12,6 +12,11 @@
     min-height: 500px;
 }
 
+.hero-about-text {
+    width: 80%;
+    text-align: center;
+}
+
 .hero-image {
     width: 600px;
     height: 400px;
