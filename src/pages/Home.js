@@ -17,7 +17,7 @@ const Home = ({
                     <img className="hero-image" src={heroImg} alt="main cat" />
                 </div>
                 <div className="hero-text-container">
-                    <p className="hero-about-text">Minim enim aliquip labore officia dolore. Deserunt adipisicing est eiusmod ut cupidatat. Culpa excepteur anim amet officia sint elit incididunt aliquip aute excepteur excepteur pariatur. Sunt ipsum sint incididunt proident proident. <Link to="/about">About</Link></p>
+                    <p className="hero-about-text">Minim enim aliquip labore officia dolore. Deserunt adipisicing est eiusmod ut cupidatat. Culpa excepteur anim amet officia sint elit incididunt aliquip aute excepteur excepteur pariatur. Sunt ipsum sint incididunt proident proident. <Link className="about-button" to="/about">About</Link></p>
                     
                 </div>
             </div>

@@ -10,6 +10,7 @@ import Modal from './components/Modal';
 import useModal from './components/useModal';
 import './App.css';
 import AboutMe from './pages/AboutMe';
+import Footer from './components/Footer';
 
 function App() {
   const [cat, setCat] = useState([])
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <button className="button-default" onClick={toggle}>Modal test</button>
+      {/* <button className="button-default" onClick={toggle}>Modal test</button> */}
       <Modal
         isShowing={isShowing}
         hide={toggle}
@@ -56,15 +57,16 @@ function App() {
           <Link to="/contact">Contact</Link>
         </nav> */}
 
-        <Navbar />
+        <Navbar toggle={toggle} />
       
         <Routes>
           <Route path="/" element={<Home cat={cat} addToBasket={addToBasket} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/aboutMe" element={<AboutMe cat={cat} />} />
+          <Route path="/aboutMe" element={<AboutMe cat={cat} addToBasket={addToBasket} />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

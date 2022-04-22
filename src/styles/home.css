@@ -12,9 +12,24 @@
     min-height: 500px;
 }
 
+.hero-text-container {
+    display: flex;
+    justify-content: center;
+}
+
 .hero-about-text {
     width: 80%;
     text-align: center;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.about-button {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1px 7px;
+    border-radius: 5px;
 }
 
 .hero-image {
